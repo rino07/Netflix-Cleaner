@@ -6,6 +6,14 @@ Netflix Cleaner améliore l'expérience de lecture sur Netflix en masquant autom
 
 ---
 
+## Aperçu du popup
+
+Voici l’interface du popup de l’extension avec l’état actif et le toggle de désactivation.
+
+![Popup de Netflix Cleaner](popup.png)
+
+---
+
 ## Problème observé
 
 Le message ci-dessous est l’erreur que l’extension aide à masquer visuellement dans l’interface.
