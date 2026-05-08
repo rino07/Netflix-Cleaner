@@ -6,6 +6,14 @@ Netflix Cleaner améliore l'expérience de lecture sur Netflix en masquant autom
 
 ---
 
+## Problème observé
+
+Le message ci-dessous est l’erreur que l’extension aide à masquer visuellement dans l’interface.
+
+![Message "Your device isn't part of the Netflix Household"](problem.png)
+
+---
+
 ## Capture d'écran
 
 > Ajoute tes captures d'écran dans le dossier `screenshots/` (ex : `screenshots/screenshot-1.png`).
