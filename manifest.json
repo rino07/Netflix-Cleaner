@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Netflix Cleaner",
+  "version": "1.0",
+  "description": "Smart Overlay Remover",
+
+  "permissions": ["storage"],
+
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.netflix.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

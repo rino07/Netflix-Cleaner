@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Netflix Cleaner</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Inter,Arial,sans-serif;
+        }
+
+        body{
+            width:320px;
+            height:220px;
+            background:#0b0b0f;
+            overflow:hidden;
+            color:white;
+        }
+
+        .bg{
+            position:absolute;
+            inset:0;
+            background:
+            radial-gradient(circle at top left,#ff003355,transparent 35%),
+            radial-gradient(circle at bottom right,#5f00ff55,transparent 40%),
+            #0b0b0f;
+            filter:blur(0px);
+        }
+
+        .card{
+            position:relative;
+            margin:15px;
+            height:190px;
+            border-radius:24px;
+            background:rgba(255,255,255,0.06);
+            backdrop-filter:blur(20px);
+            border:1px solid rgba(255,255,255,0.08);
+            padding:20px;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            box-shadow:
+            0 10px 40px rgba(0,0,0,0.4),
+            inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+
+        .top{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+        .logo-icon{
+            width:46px;
+            height:46px;
+            border-radius:14px;
+            overflow:hidden;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            box-shadow:0 5px 20px rgba(255,0,60,0.25);
+        }
+
+        .logo-icon img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .title h1{
+            font-size:17px;
+            font-weight:700;
+        }
+
+        .title p{
+            font-size:12px;
+            color:#a1a1aa;
+            margin-top:3px;
+        }
+
+        .status{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            font-size:13px;
+            color:#cfcfcf;
+        }
+
+        .dot{
+            width:10px;
+            height:10px;
+            border-radius:50%;
+            background:#00ff88;
+            box-shadow:0 0 12px #00ff88;
+        }
+
+        /* When disabled, make the status dot gray and remove glow */
+        .dot.disabled{
+            background:#6b6b72;
+            box-shadow:none;
+        }
+
+        .middle{
+            margin-top:10px;
+        }
+
+        .description{
+            font-size:13px;
+            line-height:1.6;
+            color:#bdbdc7;
+        }
+
+        .bottom{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .toggle-wrapper{
+            position:relative;
+            width:74px;
+            height:40px;
+            border-radius:999px;
+            background:#1c1c25;
+            cursor:pointer;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.06);
+        }
+
+        .toggle-circle{
+            position:absolute;
+            top:4px;
+            left:4px;
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            background:white;
+            transition:0.3s cubic-bezier(.68,-0.6,.32,1.6);
+            box-shadow:0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .enabled{
+            background:linear-gradient(135deg,#ff003c,#7a00ff);
+        }
+
+        .enabled .toggle-circle{
+            transform:translateX(34px);
+        }
+
+        .power-text{
+            font-size:14px;
+            font-weight:600;
+        }
+
+        .footer{
+            font-size:11px;
+            color:#7d7d88;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+    <div class="top">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <img src="logo.png" alt="logo">
+            </div>
+
+            <div class="title">
+                <h1>Netflix Cleaner</h1>
+                <p>Smart Overlay Remover</p>
+            </div>
+
+        </div>
+
+        <div class="status">
+            <div class="dot"></div>
+            <span id="statusText">Active</span>
+        </div>
+
+    </div>
+
+    <div class="middle">
+
+        <div class="description">
+            Automatically removes annoying overlays and restores a clean Netflix experience in real time.
+        </div>
+
+    </div>
+
+    <div class="bottom">
+
+        <div>
+            <div class="power-text">Protection</div>
+            <div class="footer">Real-time DOM cleaning</div>
+        </div>
+
+        <div class="toggle-wrapper enabled" id="toggle">
+            <div class="toggle-circle"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
