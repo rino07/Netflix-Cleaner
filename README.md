@@ -22,15 +22,6 @@ Le message ci-dessous est l’erreur que l’extension aide à masquer visuellem
 
 ---
 
-## Capture d'écran
-
-> Ajoute tes captures d'écran dans le dossier `screenshots/` (ex : `screenshots/screenshot-1.png`).
-
-![Popup example](screenshots/screenshot-1.png)
-![Page example](screenshots/screenshot-2.png)
-
----
-
 ## Fonctionnalités
 
 - Masquage automatique des overlays gênants
