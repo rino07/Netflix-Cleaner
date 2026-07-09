@@ -20,6 +20,16 @@ function updateButton(enabled) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+// tu sais c'est comme ça quand commence a comprendre git 
 chrome.storage.local.get(['enabled'], (result) => {
     const enabled = result.enabled ?? true;
     updateButton(enabled);
