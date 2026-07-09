@@ -1,3 +1,9 @@
+
+
+
+C'est juste un test pour voir si la commande : git reset HEAD vas supprimer le dernier commit
+
+
 # Netflix Cleaner
 
 ![Logo](logo.png)
